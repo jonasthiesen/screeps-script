@@ -7,7 +7,7 @@ let helper        = require('helper');
 let roleDistribution = {
 	harvester: 6,
 	builder: 2,
-	upgrader: 3,
+	upgrader: 5,
 	repairer: 1
 };
 
