@@ -5,9 +5,9 @@ let roleRepairer  = require('role.repairer');
 let helper        = require('helper');
 
 let roleDistribution = {
-	harvester: 6,
+	harvester: 10,
 	builder: 2,
-	upgrader: 5,
+	upgrader: 4,
 	repairer: 1
 };
 
