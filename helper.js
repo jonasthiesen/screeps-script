@@ -25,6 +25,10 @@ let helper = {
 	    return _(Memory.creeps).filter( { role: role } ).size();
 	},
 
+	countCreepsBySource(source) {
+		return _(Memory.creeps).filter( { souce: source } ).size();
+	},
+
 	clearMemory() {
 		for (let i in Memory.creeps) {
 	        if (! Game.creeps[i]) {
@@ -37,7 +41,7 @@ let helper = {
 		for (let role in obj) {
 			if (this.countCreepsByRole(role) < obj[role]) {
 				if (role === 'harvester') {
-					if (this.countCreepsByRole(role) <= 4) {
+					if (this.countCreepsBySource(0) <= 4) {
 						this.createCreep([WORK, MOVE, CARRY], { role: role, source: 0 });
 					} else {
 						this.createCreep([WORK, MOVE, CARRY], { role: role, source: 1 });
