@@ -33,12 +33,24 @@ let helper = {
 	    }
 	},
 
-	perserveCreeps(obj) {
+	preserveCreeps(obj) {
 		for (let role in obj) {
 			if (this.countCreepsByRole(role) < obj[role]) {
-				Game.spawns.Spawn1.createCreep([WORK, MOVE, CARRY], null, { role: role });
+				if (role === 'harvester') {
+					if (this.countCreepsByRole(role) <= 4) {
+						this.createCreep([WORK, MOVE, CARRY], { role: role, source: 0 });
+					} else {
+						this.createCreep([WORK, MOVE, CARRY], { role: role, source: 1 });
+					}
+				} else {
+					this.createCreep([WORK, MOVE, CARRY], { role: role });
+				}
 			}
 		}
+	},
+
+	createCreep(body, memory) {
+		Game.spawns.Spawn1.createCreep(body, null, memory);
 	}
 };
 

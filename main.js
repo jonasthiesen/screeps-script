@@ -4,10 +4,10 @@ let roleUpgrader  = require('role.upgrader');
 let roleRepairer  = require('role.repairer');
 let helper        = require('helper');
 
-let roleQuantities = {
+let roleDistribution = {
 	harvester: 6,
 	builder: 2,
-	upgrader: 1,
+	upgrader: 3,
 	repairer: 1
 };
 
@@ -17,5 +17,5 @@ module.exports.loop = function () {
 	}
 
 	helper.clearMemory();
-    helper.perserveCreeps(roleQuantities);
+    helper.preserveCreeps(roleDistribution);
 }
