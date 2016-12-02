@@ -1,12 +1,12 @@
 let roleHarvester = require('role.harvester');
 let roleBuilder   = require('role.builder');
 let roleUpgrader  = require('role.upgrader');
-// let roleRepairer  = require('role.repairer');
+let roleRepairer  = require('role.repairer');
 let helper        = require('helper');
 
 let roleQuantities = {
-	harvester: 3,
-	builder: 1,
+	harvester: 6,
+	builder: 2,
 	upgrader: 1,
 	repairer: 1
 };

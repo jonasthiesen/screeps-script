@@ -7,7 +7,7 @@ let helper = {
 	assignRoles(creep) {
 	    switch (creep.memory.role) {
 	        case 'harvester':
-	            roleHarvester.run(creep);
+	        	roleHarvester.run(creep);
 	            break;
 	        case 'builder':
 	            roleBuilder.run(creep);

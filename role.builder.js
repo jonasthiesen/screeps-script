@@ -1,10 +1,8 @@
+let helperCreep = require('helper.creep');
+
 let roleBuilder = {
     run(creep) {
-        if (creep.carry.energy == 0 && Game.spawns.Spawn1.energy >= 250) {
-            if (creep.withdraw(Game.spawns.Spawn1, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.spawns.Spawn1);
-            }
-        }
+        helperCreep.fetchEnergy(creep);
             
         let constructions = creep.room.find(FIND_CONSTRUCTION_SITES);
         
