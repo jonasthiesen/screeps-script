@@ -5,10 +5,10 @@ let roleRepairer  = require('role.repairer');
 let helper        = require('helper');
 
 let roleDistribution = {
-	harvester: 10,
-	builder: 2,
+	repairer: 1,
 	upgrader: 4,
-	repairer: 1
+	builder: 2,
+	harvester: 4,
 };
 
 module.exports.loop = function () {
