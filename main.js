@@ -1,14 +1,10 @@
-let roleHarvester = require('role.harvester');
-let roleBuilder   = require('role.builder');
-let roleUpgrader  = require('role.upgrader');
-let roleRepairer  = require('role.repairer');
-let helper        = require('helper');
+let helper = require('helper');
 
 let roleDistribution = {
 	repairer: 1,
-	upgrader: 4,
-	builder: 2,
-	harvester: 4,
+	upgrader: 1,
+	builder: 3,
+	harvester: 10,
 };
 
 module.exports.loop = function () {
@@ -17,5 +13,5 @@ module.exports.loop = function () {
 	}
 
 	helper.clearMemory();
-    helper.preserveCreeps(roleDistribution);
+  helper.preserveCreeps(roleDistribution);
 }
